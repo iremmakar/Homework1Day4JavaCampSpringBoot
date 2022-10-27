@@ -1,0 +1,46 @@
+package Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.List;
+
+import Kodlama.io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
+import Kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+public class InMemoryProgrammingLanguageRepository implements ProgrammingLanguageRepository{
+	
+	List<ProgrammingLanguage> programmingLanguage;
+	
+	
+	
+	public InMemoryProgrammingLanguageRepository() {
+		programmingLanguage.add(new ProgrammingLanguage("PHP",1));
+		programmingLanguage.add(new ProgrammingLanguage("Java",2));
+		programmingLanguage.add(new ProgrammingLanguage("Python",3));
+		programmingLanguage.add(new ProgrammingLanguage("Javascript",4));
+
+		
+	}
+
+
+
+	@Override
+	public List<ProgrammingLanguage> getAll() {
+		
+		return programmingLanguage;
+	}
+
+	
+
+	@Override
+	public List<ProgrammingLanguage> delete() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> update() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

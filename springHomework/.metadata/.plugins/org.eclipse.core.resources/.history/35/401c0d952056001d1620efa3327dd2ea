@@ -1,0 +1,20 @@
+package Kodlama.io.Devs.webApi.contollers;
+
+import java.util.List;
+
+import Kodlama.io.Devs.business.abstracts.ProgrammingLanguageService;
+
+public class ProgrammingLanguageController {
+	ProgrammingLanguageService programmingLanguageService;
+
+	public ProgrammingLanguageController(ProgrammingLanguageService programmingLanguageService) {
+		super();
+		this.programmingLanguageService = programmingLanguageService;
+	}
+	
+	public List<ProgrammingLanguage> getAll(){
+		return programmingLanguageService.getAll();
+	}
+	
+
+}

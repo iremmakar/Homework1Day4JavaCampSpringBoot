@@ -1,0 +1,47 @@
+package Kodlama.io.Devs.business.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Kodlama.io.Devs.business.abstracts.ProgrammingLanguageService;
+import Kodlama.io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
+import Kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+public class ProgrammingLanguageManager implements ProgrammingLanguageService{
+
+	ProgrammingLanguageRepository programmingLanguageRepository;
+	List<ProgrammingLanguage> programmingLanguages = new ArrayList<ProgrammingLanguage>();
+	
+	
+	public ProgrammingLanguageManager(ProgrammingLanguageRepository programmingLanguageRepository) {
+		super();
+		this.programmingLanguageRepository = programmingLanguageRepository;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> getAll(ProgrammingLanguage programmingLanguages) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> delete(ProgrammingLanguage programmingLanguage) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> update(int index, String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> add(ProgrammingLanguage programmingLanguage,ProgrammingLanguage programmingLanguages) {
+		for(ProgrammingLanguage programmingLanguage: ) {
+			
+		}
+		return null;
+	}
+
+}

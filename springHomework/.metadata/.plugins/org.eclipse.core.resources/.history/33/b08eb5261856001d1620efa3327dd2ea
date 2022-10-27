@@ -1,0 +1,48 @@
+package Kodlama.io.Devs.dataAccess.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Kodlama.io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
+import Kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
+
+public class InMemoryProgrammingLanguageRepository implements ProgrammingLanguageRepository{
+	
+	List<ProgrammingLanguage> programmingLanguages;
+	
+	
+	
+	public InMemoryProgrammingLanguageRepository() {
+		programmingLanguages= new ArrayList<ProgrammingLanguage>();
+		programmingLanguages.add(new ProgrammingLanguage("PHP",1));
+		programmingLanguages.add(new ProgrammingLanguage("Java",2));
+		programmingLanguages.add(new ProgrammingLanguage("Python",3));
+		programmingLanguages.add(new ProgrammingLanguage("Javascript",4));
+
+		
+	}
+
+
+
+	@Override
+	public List<ProgrammingLanguage> getAll() {
+		
+		return programmingLanguages;
+	}
+
+	
+
+	@Override
+	public List<ProgrammingLanguage> delete(ProgrammingLanguage programmingLanguage) {
+		programmingLanguages.remove(programmingLanguage);
+		return programmingLanguages;
+	}
+
+	@Override
+	public List<ProgrammingLanguage> update(int index,String name) {
+		programmingLanguages.set(index, new ProgrammingLanguage(name,index));
+		return null;
+	}
+	
+
+}
